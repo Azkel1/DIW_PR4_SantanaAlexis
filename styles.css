@@ -1,0 +1,97 @@
+/* ---------------- Colores ---------------- */
+:root {
+    --dark-blue: #518AAD;
+    --light-blue: #69C3FA;
+    --yellow: #FAD75C;
+    --dark-purple: #682FAD;
+    --light-purple: #9C50FA;
+}
+
+/* ---------------- Estilos Escritorio ---------------- */
+* {
+    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* ---- Cabecera ---- */
+header {
+    background-color: var(--dark-blue);
+    padding: 0.3em 0.5em;
+    overflow: auto;
+}
+
+header > aside {
+    float: right;
+    padding: 1.4em 2em;
+}
+
+header a{
+    color: var(--yellow);
+    display: block;
+    text-decoration: none;
+    float: right;
+    clear: right;
+}
+
+.header-button {
+    background-color: var(--yellow);
+    border-radius: 7px;
+    color: var(--dark-blue);
+    margin-bottom: 0.5em;
+    padding: 0.8em 1em;
+    width: fit-content;
+}
+
+.header-button:hover, .header-button:focus {
+    background-color: var(--dark-blue);
+    box-shadow: inset 0 0 0 2px var(--yellow);
+    color: var(--yellow);
+}
+
+.feather.feather-log-in{
+    vertical-align: -0.4em;
+    padding-left: 0.2em;
+}
+
+/* ---------------- Estilos Móviles ---------------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 411px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
+    header {
+        text-align: center;
+    }
+
+    header > aside {
+        float: none;
+        display: inline-block;
+        padding: 1em 0.4em;
+    }
+
+    header a {
+        display: inline;
+        float: none;
+        clear: none;
+        margin: 0 0.5em;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-device-width : 411px) and (max-device-width : 513px){   /* Móvil */
+    body {
+        font-size: 14px;
+    }
+
+    header > img {
+        width: 60%;
+    }
+
+    header > aside {
+        padding: 1em 1.5em;
+    }
+
+    .header-button {
+        padding: 0.7em 0.7em;
+    }
+}
