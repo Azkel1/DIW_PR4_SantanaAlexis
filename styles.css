@@ -72,7 +72,10 @@ header > aside a{
 main {
     text-align: center;
     margin: 1em auto;
+    padding-bottom: 2em;
+    overflow: auto;
     width: 85%;
+    min-height: calc(100vh - 350px);
 }
 
 main h1 {
@@ -81,15 +84,25 @@ main h1 {
     text-transform: uppercase;
 }
 
+main a {
+    text-decoration: none;
+}
+
 .inicio-tipo-usuario {
     background-color: var(--light-blue);
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: var(--orange) 14px 14px;
+    color: black;
     float: left;
     margin-left: 5%;
     overflow: auto;
+    transition: box-shadow .1s;
     width: 26.66666666666667%;
+}
+
+.inicio-tipo-usuario:hover {
+    box-shadow: var(--orange) 18px 18px;
 }
 
 .inicio-tipo-usuario h2{
@@ -102,8 +115,43 @@ main h1 {
     padding: 1em;
 }
 
+/* ---- Pie de página ---- */
+footer {
+    width: 65%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.inicio-footer {
+    display: inline-block;
+    width: 47%;
+}
+
+.inicio-footer p {
+    margin: 0;
+}
+
+.inicio-footer#desc {
+    vertical-align: super;
+}
+
+.inicio-footer#links {
+    border-left: 1px solid var(--dark-blue);
+    margin-left: 2%;
+    padding-left: 2%;
+}
+
+.inicio-footer#links p {
+    margin-bottom: 0.7em;
+}
+
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 472px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
+@media only screen and (min-device-width : 320px) and (max-device-width : 489px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
     header {
         text-align: center;
     }
@@ -123,7 +171,7 @@ main h1 {
     }
 }
 
-@media only screen and (min-device-width : 473px) and (max-device-width : 512px){   /* Móvil */
+@media only screen and (min-device-width : 490px) and (max-device-width : 530px){   /* Móvil */
     body {
         font-size: 14px;
     }
@@ -133,20 +181,64 @@ main h1 {
     }
 
     header > aside {
-        padding: 1.8em 1.5em;
+        padding: 2.3em 1.5em;
     }
 
     .header-button {
         padding: 0.7em 0.7em;
     }
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 530px){
+    main {
+        padding-bottom: 0;
+    }
+    
+    footer {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    .inicio-footer {
+        float: none;
+        width: 100%;
+    }
+    
+    .inicio-footer#links {
+        border-left: none;
+        border-top: 1px solid var(--dark-blue);
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 1em;
+        margin-top: 1em;
+    }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 768px){
+    header img {
+        margin: 0.5em 0;
+    }
+
     .inicio-tipo-usuario {
         box-shadow: none;
         float: none;
         width: 100%;
         margin: 1.4em 0;
+    }
+
+    .inicio-tipo-usuario:hover {
+        box-shadow: none;
+    }
+
+    footer {
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .inicio-footer#desc {
+        vertical-align: top;
     }
 }
 
@@ -157,5 +249,9 @@ main h1 {
 
     .inicio-tipo-usuario p {
         font-size: 95%;
+    }
+
+    .inicio-footer#desc {
+        vertical-align: top;
     }
 }
