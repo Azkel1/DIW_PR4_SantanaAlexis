@@ -1,8 +1,10 @@
 /* ---------------- Colores ---------------- */
 :root {
-    --dark-blue: #518AAD;
-    --light-blue: #69C3FA;
+    --dark-blue: #318579;
+    --light-blue: #6ad0cb;
+    --orange: #ff9061;
     --yellow: #FAD75C;
+    --light-yellow: #fce79c;
     --dark-purple: #682FAD;
     --light-purple: #9C50FA;
 }
@@ -13,8 +15,13 @@
 }
 
 body {
-    margin: 0;
+    background-color: var(--light-yellow);
     font-size: 16px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ---- Cabecera ---- */
@@ -24,12 +31,16 @@ header {
     overflow: auto;
 }
 
+header img{
+    height: 116px;
+}
+
 header > aside {
     float: right;
     padding: 1.4em 2em;
 }
 
-header a{
+header > aside a{
     color: var(--yellow);
     display: block;
     text-decoration: none;
@@ -57,8 +68,42 @@ header a{
     padding-left: 0.2em;
 }
 
+/* ---- Cuerpo ---- */
+main {
+    text-align: center;
+    margin: 1em auto;
+    width: 85%;
+}
+
+main h1 {
+    color: var(--dark-blue);
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.inicio-tipo-usuario {
+    background-color: var(--light-blue);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: var(--orange) 14px 14px;
+    float: left;
+    margin-left: 5%;
+    overflow: auto;
+    width: 26.66666666666667%;
+}
+
+.inicio-tipo-usuario h2{
+    background-color: var(--yellow);
+    margin: 0;
+    padding: 1em;
+}
+
+.inicio-tipo-usuario p {
+    padding: 1em;
+}
+
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 411px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
+@media only screen and (min-device-width : 320px) and (max-device-width : 472px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
     header {
         text-align: center;
     }
@@ -69,7 +114,7 @@ header a{
         padding: 1em 0.4em;
     }
 
-    header a {
+    header > aside a {
         display: inline;
         float: none;
         clear: none;
@@ -78,7 +123,7 @@ header a{
     }
 }
 
-@media only screen and (min-device-width : 411px) and (max-device-width : 513px){   /* Móvil */
+@media only screen and (min-device-width : 473px) and (max-device-width : 512px){   /* Móvil */
     body {
         font-size: 14px;
     }
@@ -88,10 +133,29 @@ header a{
     }
 
     header > aside {
-        padding: 1em 1.5em;
+        padding: 1.8em 1.5em;
     }
 
     .header-button {
         padding: 0.7em 0.7em;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px){
+    .inicio-tipo-usuario {
+        box-shadow: none;
+        float: none;
+        width: 100%;
+        margin: 1.4em 0;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .inicio-tipo-usuario h2 {
+        font-size: 115%;
+    }
+
+    .inicio-tipo-usuario p {
+        font-size: 95%;
     }
 }
