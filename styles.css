@@ -27,32 +27,38 @@ h1, h2, h3, h4, h5, h6 {
 /* ---- Cabecera ---- */
 header {
     background-color: var(--dark-blue);
-    padding: 0.3em 0.5em;
+    display: flex;
+    padding: 0.4em;
+    justify-content: space-between;
+    align-items: center;
     overflow: auto;
 }
 
-header img{
-    height: 116px;
+header > a{
+    height: 105px;
+}
+
+header img {
+    height: inherit;
 }
 
 header > aside {
-    float: right;
-    padding: 1.4em 2em;
+    align-self: center;
+    margin-right: 1.1em;
 }
 
 header > aside a{
     color: var(--yellow);
     display: block;
     text-decoration: none;
-    float: right;
-    clear: right;
 }
 
 .header-button {
     background-color: var(--yellow);
     border-radius: 7px;
+    display: flex;
+    align-items: center;
     color: var(--dark-blue);
-    margin-bottom: 0.5em;
     padding: 0.8em 1em;
     width: fit-content;
 }
@@ -64,8 +70,7 @@ header > aside a{
 }
 
 .feather.feather-log-in{
-    vertical-align: -0.4em;
-    padding-left: 0.2em;
+    padding-left: 0.4em;
 }
 
 /* ---- Cuerpo ---- */
@@ -88,14 +93,19 @@ main a {
     text-decoration: none;
 }
 
+#inicio-tipos {
+    display: flex;
+    justify-content: space-around;
+}
+
 .inicio-tipo-usuario {
     background-color: var(--light-blue);
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: var(--orange) 14px 14px;
     color: black;
-    float: left;
-    margin-left: 5%;
+    /* float: left; */
+    /* margin-left: 5%; */
     overflow: auto;
     transition: box-shadow .1s;
     width: 26.66666666666667%;
@@ -117,8 +127,8 @@ main a {
 
 /* ---- Pie de página ---- */
 footer {
-    width: 65%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     overflow: auto;
 }
 
@@ -127,102 +137,46 @@ footer a {
     color: var(--dark-blue);
 }
 
-.inicio-footer {
-    display: inline-block;
-    width: 47%;
+footer > div {
+    width: 30%;
 }
 
 .inicio-footer p {
     margin: 0;
 }
 
-.inicio-footer#desc {
-    vertical-align: super;
-}
-
-.inicio-footer#links {
+footer #links {
     border-left: 1px solid var(--dark-blue);
     margin-left: 2%;
     padding-left: 2%;
 }
 
-.inicio-footer#links p {
+footer #links p {
     margin-bottom: 0.7em;
 }
 
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 489px){    /* Móvil pequeño */ /* TODO: Hacer que los enlaces ocupen todo el ancho */
-    header {
-        text-align: center;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    .inicio-tipo-usuario h2 {
+        font-size: 115%;
     }
 
-    header > aside {
-        float: none;
-        display: inline-block;
-        padding: 1em 0.4em;
-    }
-
-    header > aside a {
-        display: inline;
-        float: none;
-        clear: none;
-        margin: 0 0.5em;
-        width: 50%;
+    .inicio-tipo-usuario p {
+        font-size: 95%;
     }
 }
 
-@media only screen and (min-device-width : 490px) and (max-device-width : 530px){   /* Móvil */
-    body {
-        font-size: 14px;
-    }
-
-    header > img {
-        width: 60%;
-    }
-
-    header > aside {
-        padding: 2.3em 1.5em;
-    }
-
-    .header-button {
-        padding: 0.7em 0.7em;
-    }
-
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 530px){
+@media only screen and (max-device-width : 768px){
     main {
         padding-bottom: 0;
     }
-    
-    footer {
-        width: 85%;
-        margin: 0 auto;
-    }
-    
-    .inicio-footer {
-        float: none;
-        width: 100%;
-    }
-    
-    .inicio-footer#links {
-        border-left: none;
-        border-top: 1px solid var(--dark-blue);
-        margin-left: 0;
-        padding-left: 0;
-        padding-top: 1em;
-        margin-top: 1em;
-    }
-}
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 768px){
-    header img {
-        margin: 0.5em 0;
+    #inicio-tipos {
+        flex-direction: column;
     }
-
+    
     .inicio-tipo-usuario {
         box-shadow: none;
-        float: none;
         width: 100%;
         margin: 1.4em 0;
     }
@@ -237,21 +191,60 @@ footer a {
         margin-bottom: 1em;
     }
 
-    .inicio-footer#desc {
-        vertical-align: top;
+    footer > div {
+        width: 50%;
+    }
+
+    footer #desc {
+        width: 85%;
     }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
-    .inicio-tipo-usuario h2 {
-        font-size: 115%;
+@media only screen and (max-device-width : 530px){
+    main {
+        padding-bottom: 0;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        margin: 0 auto;
     }
 
-    .inicio-tipo-usuario p {
-        font-size: 95%;
+    footer div {
+        width: 100%;
+    }
+    
+    footer #links {
+        border-left: none;
+        border-top: 1px solid var(--dark-blue);
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 1em;
+        margin-top: 1em;
     }
 
-    .inicio-footer#desc {
-        vertical-align: top;
+    footer #desc {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width : 489px){    /* Móvil pequeño */ 
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > a {
+        height: 90px;
+    }
+
+    header aside {
+        margin-right: 0;
+    }
+
+    header > aside a {
+        margin: 0.5em 0.5em;
     }
 }
