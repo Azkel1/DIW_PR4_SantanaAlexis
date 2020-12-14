@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* ---------------- Colores ---------------- */
+:root {
+    --dark-blue: #318579;
+    --light-blue: #6ad0cb;
+    --orange: #ff9061;
+    --yellow: #FAD75C;
+    --light-yellow: #fce79c;
+    --dark-purple: #682FAD;
+    --light-purple: #9C50FA;
+}
+
+/* ---------------- Estilos ---------------- */
+
+* {
+    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-yellow);
+    font-size: 16px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

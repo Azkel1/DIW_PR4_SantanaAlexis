@@ -1,29 +1,6 @@
-/* ---------------- Colores ---------------- */
-:root {
-    --dark-blue: #318579;
-    --light-blue: #6ad0cb;
-    --orange: #ff9061;
-    --yellow: #FAD75C;
-    --light-yellow: #fce79c;
-    --dark-purple: #682FAD;
-    --light-purple: #9C50FA;
-}
+@import "base.css";
 
 /* ---------------- Estilos Escritorio ---------------- */
-* {
-    font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: var(--light-yellow);
-    font-size: 16px;
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 /* ---- Cabecera ---- */
 header {
     background-color: var(--dark-blue);
