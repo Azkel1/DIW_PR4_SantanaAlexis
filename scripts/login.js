@@ -2,13 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let login = document.getElementById("login-frame");
     let register = document.getElementById("register-frame");
 
+    //TEMP: Al hacer click en el botón de iniciar sesión llevar a la página de administración. Quitar una vez que se compruebe correctamente en el servidor el login.
+    document.getElementById("login-try").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.replace("administracion.html");
+    });
+
     login.addEventListener("click", () => (cambiarActivo)(login, register));
     register.addEventListener("click", () => (cambiarActivo)(register, login));
 
     /**
      * Función para alternar que opción es la visible en la página de login (iniciar sesión | registrarse). 
-     * @param {HTMLElement} active Elemento que va a ser el que se muestra al usuario.
-     * @param {HTMLElement} hidden Elemento que anteriormente era el activo y ahora se va a ocultar.
+     * @param {Object} active Elemento que va a ser el que se muestra al usuario.
+     * @param {Object} hidden Elemento que anteriormente era el activo y ahora se va a ocultar.
      */
     function cambiarActivo(active, hidden) {
         activeForm = active.getElementsByTagName("form")[0];    //Obtener el formulario correspondiente al elemento que se va a mostrar.

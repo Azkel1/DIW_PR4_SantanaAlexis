@@ -4,10 +4,12 @@
 /* ---- Cabecera ---- */
 header {
     background-color: var(--dark-blue);
+    
     display: flex;
-    padding: 0.4em;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    
+    padding: 0.4em;
     overflow: auto;
 }
 
@@ -32,11 +34,14 @@ header > aside a{
 
 .header-button {
     background-color: var(--yellow);
+    color: var(--dark-blue);
     border-radius: 7px;
+    
     display: flex;
     align-items: center;
-    color: var(--dark-blue);
+    
     padding: 0.8em 1em;
+    
     width: fit-content;
 }
 
@@ -55,9 +60,9 @@ main {
     text-align: center;
     margin: 1em auto;
     padding-bottom: 2em;
-    overflow: auto;
     width: 85%;
     min-height: calc(100vh - 350px);
+    overflow: auto;
 }
 
 main h1 {
@@ -77,15 +82,16 @@ main a {
 
 .inicio-tipo-usuario {
     background-color: var(--light-blue);
+    color: black;
+    
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: var(--orange) 14px 14px;
-    color: black;
-    /* float: left; */
-    /* margin-left: 5%; */
-    overflow: auto;
+    
     transition: box-shadow .1s;
     width: 26.66666666666667%;
+
+    overflow: auto;
 }
 
 .inicio-tipo-usuario:hover {
@@ -196,10 +202,11 @@ footer #links p {
     footer #links {
         border-left: none;
         border-top: 1px solid var(--dark-blue);
-        margin-left: 0;
-        padding-left: 0;
-        padding-top: 1em;
+       
         margin-top: 1em;
+        margin-left: 0;
+        padding-top: 1em;
+        padding-left: 0;
     }
 
     footer #desc {

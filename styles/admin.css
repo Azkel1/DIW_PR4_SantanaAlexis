@@ -1,0 +1,74 @@
+@import "base.css";
+
+/* ---------------- Estilos Escritorio ---------------- */
+/* ---- Cabecera ---- */
+html, body {
+    height: 100%;
+}
+
+a {
+    color: var(--yellow);
+    display: block;
+    text-decoration: none; 
+}
+
+ul {
+    list-style: none;
+}
+
+header > nav {
+    background-color: var(--dark-blue);
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    padding: 0.4em 1em 0.4em 0.4em ;
+    overflow: auto;
+}
+
+aside {
+    background-color: var(--dark-blue);
+    
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 1.4em 0.4em;
+    
+    height: 100%;
+    width: 250px;
+}
+
+aside > a{
+    height: 75px;
+}
+
+aside > a > img {
+    height: inherit;
+}
+
+aside > nav {
+    margin-top: 2em;
+}
+
+aside > nav > ul {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0;
+    padding: 0;
+}
+
+aside > nav > ul a {
+    padding: 1em;
+    text-align: center;
+}
+
+aside > nav > ul a:hover {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+}
+
+/* ---- Cuerpo ---- */

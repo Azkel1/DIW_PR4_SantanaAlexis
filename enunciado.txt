@@ -1,0 +1,23 @@
+Descripción
+-----------------
+La práctica consiste en desarrollar las interfaces del sitio web del que se ha hecho la planificación en la Práctica 2 utilizando HTML y CSS.
+La funcionalidad será la que se especificaba en el enunciado de la práctica 2, siguiendo las tareas que se plantearon.
+En principio el sitio se basará en los prototipos realizados, pero se pueden realizar los cambios que se consideren oportunos con el fin de incluir mejoras.
+También se puede utilizar JavaScript y de manera opcional PHP, pero solo se valorará el código relativo a las interfaces.
+Se pueden utilizar fuentes  (ej. Google Fonts) e iconos externos (ej. FontAwesome).
+No se utilizarán librerías externas o frameworks.
+
+Qué entregar
+-----------------
+Un documento en formato Word (.docx) que contenga:
+Documentación del sitio web: Aclaraciones relativas al desarrollo (ej. navegación, login, layout, media queries, puntos de ruptura, elementos utilizados...).
+Enlace al repositorio con el código (ej.  GitHub o Bitbucket). Se debe dar acceso a belen.nienun@juandecolonia.es
+Enlace al sitio web (ej. se puede alojar en un Hosting gratuito como 000webhost o InfinityFree).
+
+Tareas
+-----------------
+Realizar las páginas para la administración del sitio:
+Requisito funcional: Los alumnos y profesores son registrados por un administrador del sitio web, que gestiona las altas/bajas de los usuarios y les asigna los módulos en los que participa cada uno.
+
+SVG Minifier: https://jakearchibald.github.io/svgomg/
+Feather Icons: https://feathericons.com/
