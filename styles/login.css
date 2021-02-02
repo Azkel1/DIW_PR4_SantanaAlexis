@@ -141,6 +141,7 @@ main #main-frame {
     stroke: var(--light-blue);
 }
 
+/* ---------------- Estilos Móviles ---------------- */
 @media only screen and (max-device-width : 530px){
     main #main-frame {
         box-shadow: none;

@@ -3,6 +3,7 @@
 
 /* ---------------- Colores ---------------- */
 :root {
+    /* Colores */
     --dark-blue: #318579;
     --light-blue: #6ad0cb;
     --orange: #ff9061;
@@ -10,6 +11,9 @@
     --light-yellow: #fce79c;
     --dark-purple: #682FAD;
     --light-purple: #9C50FA;
+
+    /* Sombras */
+    --light-shade: rgba(0 0 0 / 10%);
 }
 
 /* ---------------- Estilos ---------------- */

@@ -6,43 +6,36 @@ html, body {
     height: 100%;
 }
 
+body {
+    display: flex;
+}
+
 a {
-    color: var(--yellow);
     display: block;
     text-decoration: none; 
 }
 
-ul {
-    list-style: none;
-}
-
-header > nav {
-    background-color: var(--dark-blue);
-    
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    
-    padding: 0.4em 1em 0.4em 0.4em ;
-    overflow: auto;
-}
-
 aside {
+    color: var(--yellow);
     background-color: var(--dark-blue);
     
-    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    padding: 1.4em 0.4em;
-    
+
+    transition: transform 1s, width .5s;
     height: 100%;
-    width: 250px;
+    width: 260px;
 }
 
-aside > a{
+aside * {
+    color: inherit;
+    white-space: nowrap;
+}
+
+aside > a {
     height: 75px;
+    margin-top: 1.4em;
 }
 
 aside > a > img {
@@ -50,10 +43,15 @@ aside > a > img {
 }
 
 aside > nav {
+    flex-grow: 1;
+
     margin-top: 2em;
+    width: 260px;
 }
 
-aside > nav > ul {
+aside > nav ul {
+    list-style: none;
+
     display: flex;
     flex-direction: column;
     
@@ -61,14 +59,103 @@ aside > nav > ul {
     padding: 0;
 }
 
-aside > nav > ul a {
-    padding: 1em;
-    text-align: center;
+aside > nav a:hover {
+    background-color: var(--light-shade);
 }
 
-aside > nav > ul a:hover {
-    color: var(--dark-blue);
-    background-color: var(--yellow);
+aside > nav a, aside > nav > ul > li:nth-of-type(1) {
+    padding: 0.7em 0 0.7em 2em;
+}
+
+/* Elementos de primer nivel de la lista */
+.sidebar-list-main {
+    font-size: 1.2em;
+    font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Elementos de segundo nivel de la lista */
+.sidebar-list-sub {
+    display: flex;
+    align-items: flex-end;
+    
+    padding: 0.5em 0 0.5em 3.5em;
+}
+
+.sidebar-list-sub > svg {
+    padding-right: 0.5em;
+    transform: scale(0.8);
+}
+
+/* Parte inferior del menú lateral que muestra la info del usuario. */
+#user-info {
+    border-top: 3px solid var(--light-shade);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5em 0;
+    width: 100%;
+}
+
+#user-info > img {
+    height: 60px;
+    clip-path: circle(22px at 22px 28px);
+}
+
+/* Botones para mostrar y ocultar el menú lateral. */
+.sidebar-toggle {
+    border: 0;
+    background-color: var(--dark-blue);
+    font-size: 1em;
+    height: 30px;
+}
+
+.sidebar-toggle:hover {
+    cursor: pointer;
+}
+
+.sidebar-toggle:focus {
+    outline: 0;
+}
+
+/* Botón para ocultar el menú lateral. */
+#hide-sidebar {
+    align-self: flex-end;
+    position: fixed;
+    top: 50%;
+}
+
+/* Botón para mostrar el menú lateral. */
+#show-sidebar {
+    border-radius: 0 15px 15px 0;
+    color: var(--yellow);
+    display: none;
+    
+    position: fixed;
+    padding-right: 0.6em;
+    top: 50%;
+    left: 0;
+}
+
+/* Clase que se añade al menú lateral para ocultarlo. */
+.sidebar-hide {
+    transform: translateX(-270px);
+    width: 0px;
 }
 
 /* ---- Cuerpo ---- */
+main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 1em 0 0 3em;
+}
+
+/* ---------------- Estilos Móviles ---------------- */
+@media only screen and (max-device-width: 768px) {
+    aside {
+        position: absolute;
+        overflow: scroll;
+    }
+}
