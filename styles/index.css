@@ -9,7 +9,7 @@ header {
     align-items: center;
     justify-content: space-between;
     
-    padding: 0.4em;
+    padding: 1em 0.4em;
     overflow: auto;
 }
 
@@ -40,6 +40,7 @@ header > aside a {
     display: flex;
     align-items: center;
     
+    margin-top: 1.5em;
     padding: 0.8em 1em;
     
     width: fit-content;
@@ -139,7 +140,7 @@ footer #links p {
 }
 
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+@media only screen and (min-width : 768px) and (max-width : 1024px){
     .inicio-tipo-usuario h2 {
         font-size: 115%;
     }
@@ -149,7 +150,7 @@ footer #links p {
     }
 }
 
-@media only screen and (max-device-width : 768px){
+@media only screen and (max-width : 768px){
     main {
         padding-bottom: 0;
     }
@@ -183,7 +184,7 @@ footer #links p {
     }
 }
 
-@media only screen and (max-device-width : 530px){
+@media only screen and (max-width : 530px){
     main {
         padding-bottom: 0;
     }
@@ -214,7 +215,7 @@ footer #links p {
     }
 }
 
-@media only screen and (max-device-width : 489px){    /* Móvil pequeño */ 
+@media only screen and (max-width : 489px){    /* Móvil pequeño */ 
     header {
         flex-direction: column;
         align-items: center;

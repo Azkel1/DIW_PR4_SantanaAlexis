@@ -1,13 +1,18 @@
 @import "base.css";
 
 /* ---------------- Estilos Escritorio ---------------- */
-/* ---- Cabecera ---- */
+/* ------------ CABECERA ------------ */
+html {
+    overflow: hidden;
+}
+
 html, body {
     height: 100%;
 }
 
 body {
     display: flex;
+    overflow-y: scroll;
 }
 
 a {
@@ -26,6 +31,7 @@ aside {
     transition: transform 1s, width .5s;
     height: 100%;
     width: 260px;
+    z-index: 1;
 }
 
 aside * {
@@ -46,7 +52,7 @@ aside > nav {
     flex-grow: 1;
 
     margin-top: 2em;
-    width: 260px;
+    width: 100%;
 }
 
 aside > nav ul {
@@ -85,6 +91,7 @@ aside > nav a, aside > nav > ul > li:nth-of-type(1) {
     padding-right: 0.5em;
     transform: scale(0.8);
 }
+/* -------------------------------------- */
 
 /* Parte inferior del menú lateral que muestra la info del usuario. */
 #user-info {
@@ -100,8 +107,10 @@ aside > nav a, aside > nav > ul > li:nth-of-type(1) {
 
 #user-info > img {
     height: 60px;
-    clip-path: circle(22px at 22px 28px);
+    clip-path: circle(22px at 50%);
+    margin-right: 0.5em;
 }
+/* ---------------------------------------------------------------- */
 
 /* Botones para mostrar y ocultar el menú lateral. */
 .sidebar-toggle {
@@ -118,12 +127,19 @@ aside > nav a, aside > nav > ul > li:nth-of-type(1) {
 .sidebar-toggle:focus {
     outline: 0;
 }
+/* ----------------------------------------------- */
 
 /* Botón para ocultar el menú lateral. */
 #hide-sidebar {
+    border-radius: 15px 0 0 15px;
+    
     align-self: flex-end;
+    align-items: center;
+    display: flex;
+    
     position: fixed;
     top: 50%;
+    padding: 0 0 0 0.2em;
 }
 
 /* Botón para mostrar el menú lateral. */
@@ -131,11 +147,16 @@ aside > nav a, aside > nav > ul > li:nth-of-type(1) {
     border-radius: 0 15px 15px 0;
     color: var(--yellow);
     display: none;
+    align-items: center;
     
     position: fixed;
-    padding-right: 0.6em;
+    padding: 0 0.2em 0 0;
     top: 50%;
     left: 0;
+}
+
+#show-sidebar > svg, #hide-sidebar > svg {
+    transform: scale(0.8);
 }
 
 /* Clase que se añade al menú lateral para ocultarlo. */
@@ -144,18 +165,179 @@ aside > nav a, aside > nav > ul > li:nth-of-type(1) {
     width: 0px;
 }
 
-/* ---- Cuerpo ---- */
+/* ------------ CUERPO ------------ */
+h1 {
+    color: var(--dark-blue);
+}
+
 main {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
-    margin: 1em 0 0 3em;
+    height: fit-content;
+    margin: 1em 2em 0 3em;
 }
 
+/* Barra superior e inferior de la tabla */
+.table-bar {
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 0.6em 0;
+}
+
+.table-bar button, .table-bar input {
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--light-shade);
+
+    outline: 0;
+
+    margin-left: 1em;
+    padding: 0.4em 0.5em;
+}
+
+.table-bar #table-search:focus {
+    background-color: var(--dark-shade);
+}
+
+.table-bar button:hover {
+    background-color: var(--dark-shade);
+    cursor: pointer;
+}
+
+.table-bar button > img {
+    transform: scale(0.8);
+}
+
+/* Tabla de usuarios */
+table {
+    border-radius: 7px;
+    border-spacing: 0;
+    box-shadow: 0 10px 40px var(--light-shade);
+
+    overflow: hidden;
+}
+
+table td span {
+    background: var(--light-shade);
+    color: dimgrey;
+    display: none;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+}
+
+tbody {
+    background-color: #ffedad;
+}
+
+tbody > tr:hover, tbody > tr:nth-last-of-type(even):hover {
+    background-color: var(--light-shade);
+}
+
+td, th {
+    padding: 1em;
+}
+
+th {
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+}
+
+/* Alinear columnas de texto a la izquierda */
+tr > td, tr > th {
+    text-align: start;
+}
+
+/* Alinear acciones al centro */
+tr > th:last-of-type, tr > td:last-of-type {
+    text-align: center;
+}
+
+tbody > tr:nth-last-of-type(even) {
+    background-color: var(--yellow);
+}
+
+tbody > tr > td > img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/* ----------------- */
+
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 1160px) {
     aside {
         position: absolute;
-        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    aside {
+        overflow-y: scroll;
+    }
+
+    .table-bar #table-search {
+        margin-left: 0;
+        flex-grow: 1;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    table thead {
+        left: -9999px;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    table tbody {
+        background-color: transparent;
+    }
+
+    table tr {
+        border-radius: 5px;
+        /* box-shadow: 0 30px 40px var(--light-shade); */
+        background-color: var(--light-shade);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 2em;
+    }
+
+    table td {
+        box-sizing: border-box;
+        margin: 0 -1px -1px 0;
+        padding-top: 35px;
+        position: relative;
+        width: 50%;
+    }
+
+    .numeric-cell {
+        text-align: start;
+    }
+
+    table > tbody tr td:last-child {
+        width: 100%;
+        text-align: start;
+    }
+
+    tbody > tr:nth-last-of-type(even) {
+        background-color: var(--light-shade);
+    }
+
+    tbody > tr:last-child {
+        margin-bottom: 0;
+    }
+
+    table td span {
+        display: block;
+        user-select: none;
     }
 }

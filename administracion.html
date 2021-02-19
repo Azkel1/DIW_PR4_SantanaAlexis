@@ -16,29 +16,82 @@
                     <li class="sidebar-list-main">Menú principal</li>
                     <li>
                         <a href="#" class="sidebar-list-sub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
                             Inicio
                         </a>
                     </li>
                     <li>
                         <a href="#" class="sidebar-list-sub">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-users"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
                             Usuarios
                         </a>
                     </li>
                     <li class="sidebar-list-main"><a href="#">Configuración</a></li>
                     <li class="sidebar-list-main"><a href="#">Ayuda</a></li>
+                    <li class="sidebar-list-main"><a href="index.html">Cerrar sesión</a></li>
                 </ul>
             </nav>
             <div id="user-info">
-                <img src="img/foto_perfil.jpg" alt>
+                <img src="img/foto_perfil.png" alt>
                 <p>Alexis Santana Cano</p>
             </div>
-            <button class="sidebar-toggle" id="hide-sidebar"><</button>
+            <button class="sidebar-toggle" id="hide-sidebar"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
         </aside>
         <main>
-            <h1>Titulo</h1>
-            <button class="sidebar-toggle" id="show-sidebar">></button>
+            <h1>Lista de usuarios</h1>
+            <div class="table-bar">
+                <input type="text" id="table-search" placeholder="Buscar">
+                <button><img src="img/icons/filter.svg" alt="Filtrar elementos"></button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rol</th>
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Correo Electrónico</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>Rol</span>Administrador</td>
+                        <td><span>DNI</span>71454683X</td>
+                        <td><span>Nombre</span>Pepito</td>
+                        <td><span>Apellidos</span>Pérez</td>
+                        <td><span>Correo Electrónico</span>pepito@gmail.com</td>
+                        <td><span>Teléfono</span>654876123</td>
+                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rol</span>Alumno</td>
+                        <td><span>DNI</span>73549612R</td>
+                        <td><span>Nombre</span>María</td>
+                        <td><span>Apellidos</span>González</td>
+                        <td><span>Correo Electrónico</span>maria@gmail.com</td>
+                        <td><span>Teléfono</span>463483153</td>
+                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                    </tr>
+                    <tr>
+                        <td><span>Rol</span>Profesor</td>
+                        <td><span>DNI</span>13546824A</td>
+                        <td><span>Nombre</span>Pablo</td>
+                        <td><span>Apellidos</span>Ramírez</td>
+                        <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                        <td><span>Teléfono</span>786315324</td>
+                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-bar">
+                <button><img src="img/icons/arrow-left.svg" alt="Anterior página"></button>
+                <button><img src="img/icons/arrow-right.svg" alt="Siguiente página"></button>
+            </div>
+            <button class="sidebar-toggle" id="show-sidebar">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
         </main>
     </body>
 </html>

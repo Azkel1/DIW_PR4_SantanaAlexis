@@ -13,6 +13,7 @@
     --light-purple: #9C50FA;
 
     /* Sombras */
+    --dark-shade: rgba(0 0 0 / 30%);;
     --light-shade: rgba(0 0 0 / 10%);
 }
 
@@ -20,6 +21,15 @@
 
 * {
     font-family: "Roboto", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Esconder las barras de desplazamiento (IE, Edge y Firefox)*/
+    -ms-overflow-style: none;   
+    scrollbar-width: none;
+}
+
+/* Esconder las barras de desplazamiento (Chrome, Safari y Opera)*/
+*::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -30,4 +40,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    user-select: none;
 }

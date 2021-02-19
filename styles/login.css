@@ -142,7 +142,7 @@ main #main-frame {
 }
 
 /* ---------------- Estilos Móviles ---------------- */
-@media only screen and (max-device-width : 530px){
+@media only screen and (max-width : 530px){
     main #main-frame {
         box-shadow: none;
         flex: 0 0 350px;
