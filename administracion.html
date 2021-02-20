@@ -5,30 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="img/logo_s.png" sizes="64x64">
         <link rel="stylesheet" href="styles/admin.css"/>
-        <script src="scripts/admin.js"></script>
+        <script src="scripts/sidebar.js"></script>
+        <script src="scripts/add_user.js"></script>
         <title>Administración - CIFP Apolo</title>
     </head>
     <body>
+        <!--------------------------- Menú lateral --------------------------->
         <aside>
             <a href="#"><img src="img/logo.svg" alt="Logo del Centro" /></a>
             <nav>
                 <ul>
                     <li class="sidebar-list-main">Menú principal</li>
                     <li>
-                        <a href="#" class="sidebar-list-sub">
+                        <a href="#" class="sidebar-list-sub sidebar-selected">
                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                            Inicio
+                            inicio
                         </a>
                     </li>
                     <li>
                         <a href="#" class="sidebar-list-sub">
                             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-                            Usuarios
+                            usuarios
                         </a>
                     </li>
-                    <li class="sidebar-list-main"><a href="#">Configuración</a></li>
-                    <li class="sidebar-list-main"><a href="#">Ayuda</a></li>
-                    <li class="sidebar-list-main"><a href="index.html">Cerrar sesión</a></li>
+                    <li class="sidebar-list-main"><a href="#">configuración</a></li>
+                    <li class="sidebar-list-main"><a href="#">ayuda</a></li>
+                    <li class="sidebar-list-main"><a href="index.html">cerrar sesión</a></li>
                 </ul>
             </nav>
             <div id="user-info">
@@ -38,57 +40,270 @@
             <button class="sidebar-toggle" id="hide-sidebar"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
         </aside>
         <main>
-            <h1>Lista de usuarios</h1>
-            <div class="table-bar">
-                <input type="text" id="table-search" placeholder="Buscar">
-                <button><img src="img/icons/filter.svg" alt="Filtrar elementos"></button>
+            <!----------------------- Lista de usuarios ----------------------->
+            <div id="inicio" class="sidebar-options">
+                <h1>Lista de usuarios</h1>
+                <div class="table-bar">
+                    <input type="text" id="table-search" placeholder="Buscar">
+                    <button><img src="img/icons/filter.svg" alt="Filtrar elementos"></button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rol</th>
+                            <th>DNI</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Correo Electrónico</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>Rol</span>Administrador</td>
+                            <td><span>DNI</span>71454683X</td>
+                            <td><span>Nombre</span>Pepito</td>
+                            <td><span>Apellidos</span>Pérez</td>
+                            <td><span>Correo Electrónico</span>pepito@gmail.com</td>
+                            <td><span>Teléfono</span>654876123</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Alumno</td>
+                            <td><span>DNI</span>73549612R</td>
+                            <td><span>Nombre</span>María</td>
+                            <td><span>Apellidos</span>González</td>
+                            <td><span>Correo Electrónico</span>maria@gmail.com</td>
+                            <td><span>Teléfono</span>463483153</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                        <tr>
+                            <td><span>Rol</span>Profesor</td>
+                            <td><span>DNI</span>13546824A</td>
+                            <td><span>Nombre</span>Pablo</td>
+                            <td><span>Apellidos</span>Ramírez</td>
+                            <td><span>Correo Electrónico</span>pablo@gmail.com</td>
+                            <td><span>Teléfono</span>786315324</td>
+                            <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="table-bar-bottom" class="table-bar">
+                    <button><img src="img/icons/arrow-left.svg" alt="Anterior página"></button>
+                    <button><img src="img/icons/arrow-right.svg" alt="Siguiente página"></button>
+                </div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rol</th>
-                        <th>DNI</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Correo Electrónico</th>
-                        <th>Teléfono</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span>Rol</span>Administrador</td>
-                        <td><span>DNI</span>71454683X</td>
-                        <td><span>Nombre</span>Pepito</td>
-                        <td><span>Apellidos</span>Pérez</td>
-                        <td><span>Correo Electrónico</span>pepito@gmail.com</td>
-                        <td><span>Teléfono</span>654876123</td>
-                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
-                    </tr>
-                    <tr>
-                        <td><span>Rol</span>Alumno</td>
-                        <td><span>DNI</span>73549612R</td>
-                        <td><span>Nombre</span>María</td>
-                        <td><span>Apellidos</span>González</td>
-                        <td><span>Correo Electrónico</span>maria@gmail.com</td>
-                        <td><span>Teléfono</span>463483153</td>
-                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
-                    </tr>
-                    <tr>
-                        <td><span>Rol</span>Profesor</td>
-                        <td><span>DNI</span>13546824A</td>
-                        <td><span>Nombre</span>Pablo</td>
-                        <td><span>Apellidos</span>Ramírez</td>
-                        <td><span>Correo Electrónico</span>pablo@gmail.com</td>
-                        <td><span>Teléfono</span>786315324</td>
-                        <td><span>Acciones</span><img src="img/icons/trash.svg" alt="Eliminar usuario"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="table-bar">
-                <button><img src="img/icons/arrow-left.svg" alt="Anterior página"></button>
-                <button><img src="img/icons/arrow-right.svg" alt="Siguiente página"></button>
+
+            <!--------------------- Opciones de usuarios --------------------->
+            <div id="usuarios" class="sidebar-options" style="display: none;">
+                <h1>Añadir un nuevo usuario</h1>
+
+                <form method="POST">
+                    <!------------------- Datos de usuario ------------------->
+                    <fieldset>
+                        <legend>Información personal</legend>
+                        <div>
+                            <label>DNI*: <input type="text" id="dni" name="dni" required></label>
+                            <label>Nombre*: <input type="text" id="nombre" name="nombre" required></label>
+                            <label>Apellidos*: <input type="text" id="apellidos" name="apellidos" required></label>
+                            <label>Fecha de nacimiento*: <input type="text" id="fecha-nac" name="fecha-nac" required></label>
+                            <label>Correo electrónico*: <input type="email" id="email" name="email" required></label>
+                            <label>Teléfono*: <input type="text" id="tel" name="tel" required></label>
+                            <label>Dirección*: <input type="text" id="direc" name="direc" required></label>
+                            <label>Genero*: 
+                                <span class="radio-group">
+                                    <input type="radio" name="genero" id="genero-h" value="hombre" reqired checked>
+                                    <label for="genero-h">Hombre</label>
+                                    
+                                    <input type="radio" name="genero" id="genero-m" value="mujer" reqired>
+                                    <label for="genero-m">Mujer</label>
+                                    
+                                    <input type="radio" name="genero" id="genero-o" value="otro" reqired>
+                                    <label for="genero-o">Otro</label>
+                                </span>
+                            </label>
+                            <label>Tipo de usuario*: 
+                                <span class="radio-group">
+                                    <input type="radio" name="tipo-usuario" id="tipo-usuario-alumno" value="alumno" required>
+                                    <label for="tipo-usuario-alumno">Alumno</label>
+                                    <input type="radio" name="tipo-usuario" id="tipo-usuario-prof" value="profesor" required>
+                                    <label for="tipo-usuario-prof">Profesor</label>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-------------------- Lista de ciclos -------------------->
+                    <fieldset id="ciclos-list" style="display: none;">
+                        <legend>Ciclos</legend>
+                        <div class="check-group">
+                            <input type="checkbox" name="ciclos" id="ciclos-dam" value="dam"> 
+                            <label for="ciclos-dam">Desarrollo de Aplicaciones Multiplataforma</label>
+
+                            <input type="checkbox" name="ciclos" id="ciclos-daw" value="daw"> 
+                            <label for="ciclos-daw">Desarrollo de Aplicaciones Web</label>
+
+                            <input type="checkbox" name="ciclos" id="ciclos-asir" value="asir"> 
+                            <label for="ciclos-asir">Administración de Sistemas Informáticos y Redes</label>
+
+                            <input type="checkbox" name="ciclos" id="ciclos-smr" value="smr"> 
+                            <label for="ciclos-smr">Sistemas Microinformáticos y Redes</label>
+                        </div>
+                    </fieldset>
+
+                    <!------------------- Lista de módulos ------------------->
+
+                    <!-- DAM -->
+                    <fieldset id="modulos-dam" style="display: none;">
+                        <legend>Desarrollo de Aplicaciones Multiplataforma</legend>
+
+                        <p>Primer curso</p>
+                        <div class="check-group">
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-si" value="si"> 
+                            <label for="modulos-dam-si">Sistemas Informáticos</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-bd" value="bd"> 
+                            <label for="modulos-dam-bd">Bases de Datos</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-p" value="p"> 
+                            <label for="modulos-dam-p">Programación</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-lmsgi" value="lmsgi"> 
+                            <label for="modulos-dam-lmsgi">Lenguajes de Marcas y Sistemas de Gestión de Información</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-ed" value="ed"> 
+                            <label for="modulos-dam-ed">Entornos de Desarrollo</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-fol" value="fol"> 
+                            <label for="modulos-dam-fol">Formación y orientación laboral</label>
+                        </div>
+
+                        <p>Segundo curso</p>
+                        <div class="check-group">
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-ad" value="ad"> 
+                            <label for="modulos-dam-ad">Acceso a Datos</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-pmdm" value="pmdm"> 
+                            <label for="modulos-dam-pmdm">Programación Multimedia y Dispositivos Móviles</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-di" value="di"> 
+                            <label for="modulos-dam-di">Desarrollo de Interfaces</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-psp" value="psp"> 
+                            <label for="modulos-dam-psp">Programación de servicios y procesos</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-sge" value="sge"> 
+                            <label for="modulos-dam-sge">Sistemas de gestión empresarial</label>
+
+                            <input type="checkbox" name="modulos-dam" id="modulos-dam-ie" value="ie"> 
+                            <label for="modulos-dam-ie">Empresa e Iniciativa Emprendedora</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- DAW -->
+                    <fieldset id="modulos-daw" style="display: none;">
+                        <legend>Desarrollo de Aplicaciones Web</legend>
+
+                        <p>Primer curso</p>
+                        <div class="check-group">
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-si" value="si"> 
+                            <label for="modulos-daw-si">Sistemas Informáticos</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-bd" value="bd"> 
+                            <label for="modulos-daw-bd">Bases de Datos</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-p" value="p"> 
+                            <label for="modulos-daw-p">Programación</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-lmsgi" value="lmsgi"> 
+                            <label for="modulos-daw-lmsgi">Lenguajes de Marcas y Sistemas de Gestión de Información</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-ed" value="ed"> 
+                            <label for="modulos-daw-ed">Entornos de Desarrollo</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-fol" value="fol"> 
+                            <label for="modulos-daw-fol">Formación y orientación laboral</label>
+                        </div>
+
+                        <p>Segundo curso</p>
+                        <div class="check-group">
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-daw" value="daw"> 
+                            <label for="modulos-daw-daw">Despliegue de Aplicaciones Web</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-diw" value="diw"> 
+                            <label for="modulos-daw-diw">Diseño de Interfaces Web</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-dwec" value="dwec"> 
+                            <label for="modulos-daw-dwec">Desarrollo Web en Entorno Cliente</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-dwes" value="dwes"> 
+                            <label for="modulos-daw-dwes">Desarrollo Web en Entorno Servidor</label>
+
+                            <input type="checkbox" name="modulos-daw" id="modulos-daw-ie" value="ie"> 
+                            <label for="modulos-daw-ie">Empresa e Iniciativa Emprendedora</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" name="crear-usuario" value="crear">Crear usuario</button>
+                </form>
             </div>
+
+            <!-------------- Botón para mostrar el menú lateral -------------->
             <button class="sidebar-toggle" id="show-sidebar">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>

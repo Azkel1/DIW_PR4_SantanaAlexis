@@ -9,10 +9,12 @@
     --orange: #ff9061;
     --yellow: #FAD75C;
     --light-yellow: #fce79c;
+    /* --light-yellow: #fff6d7; */
     --dark-purple: #682FAD;
     --light-purple: #9C50FA;
 
     /* Sombras */
+    --blue-shade: rgba(106 208 203 / 60%);
     --dark-shade: rgba(0 0 0 / 30%);;
     --light-shade: rgba(0 0 0 / 10%);
 }

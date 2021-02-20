@@ -1,0 +1,163 @@
+/* --------------------------- ESTILOS ESCRITORIO --------------------------- */
+#usuarios form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#usuarios fieldset {
+    background-color: var(--blue-shade);
+    box-shadow: var(--orange) 7px 7px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    color: var(--dark-blue);
+}
+
+#usuarios fieldset > legend{
+    font-weight: bold;
+}
+
+#usuarios fieldset div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.2em;
+
+    padding: 1.1em;
+}
+
+#usuarios fieldset > p {
+    margin: 1em 0 0 0;
+    font-weight: 500;
+}
+
+#usuarios fieldset:first-of-type input:not([type = "submit"]) {
+    background-color: var(--light-yellow);
+}
+
+#usuarios label {
+    display: flex;
+    align-items: center;
+}
+
+/* Botones de radio */
+#usuarios .radio-group {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-left: 0.6em;
+}
+
+#usuarios .radio-group p {
+    margin: 0 1em 0 0;
+}
+
+#usuarios .radio-group label {
+    cursor: pointer;
+    padding: 0.5em 0.8em;
+    user-select: none;
+}
+
+#usuarios .radio-group label:first-of-type {
+    border-radius: 5px 0 0 5px;
+}
+
+#usuarios .radio-group label:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+
+#usuarios .radio-group label:hover {
+    background-color: var(--light-shade);
+}
+
+#usuarios .radio-group input:checked + label {
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+    transition: 0.3s;
+}
+
+/* Botones de check */
+#usuarios .check-group input + label {
+    cursor: pointer;
+    user-select: none;
+}
+
+#usuarios .check-group input + label::before {
+    content: "\00a0";
+    background-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    padding: 0 0.45em;
+    margin-right: 0.5em;
+
+    transition: 0.2s;
+}
+
+#usuarios .check-group input:checked + label::before {
+    background-color: var(--yellow);
+}
+
+#usuarios .radio-group input,
+#usuarios .check-group input {
+    display: none;
+}
+/* ---------------- */
+
+#usuarios input:not([type="submit"]) {
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    
+    flex-grow: 1;
+
+    padding: 0.5em 0.6em;
+    margin-left: 0.6em;
+}
+
+#usuarios button {
+    background-color: var(--blue-shade);
+    color: var(--dark-blue);
+    border: 0;
+    border-radius: 7px;
+    outline: 0;
+
+    font-size: 1em;
+    
+    padding: 0.8em 1em;
+    transition: 0.3s;
+}
+
+#usuarios button:hover, #usuarios button:focus {
+    background-color: var(--light-blue);
+    box-shadow: var(--orange) 7px 7px;
+    cursor: pointer;
+}
+
+/* ---------------------------- ESTILOS MÓVILES ---------------------------- */
+@media only screen and (max-width: 1230px) {
+    #usuarios fieldset div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #usuarios fieldset:first-of-type label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #usuarios fieldset:first-of-type input:not([type = "submit"]), 
+    #usuarios .radio-group {
+        margin-top: 0.4em;
+        width: 100%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: fill-available;
+    }
+    
+    #usuarios fieldset div {
+        grid-template-columns: 1fr;
+    }
+}
