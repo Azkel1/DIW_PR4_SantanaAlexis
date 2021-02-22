@@ -1,6 +1,6 @@
 @import "base.css";
 
-/* ---------------- Estilos Escritorio ---------------- */
+/* --------------------------- ESTILOS ESCRITORIO --------------------------- */
 /* ---- Cuerpo ---- */
 main {
     display: flex;
@@ -86,9 +86,29 @@ main #main-frame {
     cursor: pointer;
 }
 
+/* Clases usadas en JS para mostrar y ocultar los divs de login y registro. */
+.activo {
+    flex-grow: 3 !important;
+    cursor: default;
+}
+
+.activo .icon-overlay {
+    opacity: 0 !important;
+}
+
+.oculto {
+    flex-grow: 1 !important;
+    cursor: pointer;
+}
+
+.oculto .icon-overlay {
+    opacity: 1 !important;
+}
+
 .oculto:hover {
     flex-grow: 2 !important;
 }
+/* ------------------------------------------------------------------------ */
 
 .icon-overlay {
     color: var(--light-blue);
@@ -105,7 +125,7 @@ main #main-frame {
     margin: 0.4em 0;
 }
 
-/* ----- INICIO DE SESIÓN ----- */
+/* ----- Inicio de sesión ----- */
 #main-frame #login-frame {
     flex-grow: 3;
 }
@@ -121,7 +141,7 @@ main #main-frame {
     color: var(--dark-blue);
 }
 
-/* ----- REGISTRO ----- */
+/* ----- Registro ----- */
 #main-frame #register-frame {
     background-color: var(--dark-blue);
     cursor: pointer;
@@ -141,7 +161,8 @@ main #main-frame {
     stroke: var(--light-blue);
 }
 
-/* ---------------- Estilos Móviles ---------------- */
+/* ---------------------------- ESTILOS MÓVILES ---------------------------- */
+/* ---------------------- Móvil ---------------------- */
 @media only screen and (max-width : 530px){
     main #main-frame {
         box-shadow: none;

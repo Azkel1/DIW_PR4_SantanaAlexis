@@ -4,18 +4,17 @@
 /* ---------------- Colores ---------------- */
 :root {
     /* Colores */
-    --dark-blue: #318579;
-    --light-blue: #6ad0cb;
+    --dark-blue: #1f6a5f;
+    --light-blue: #6fece5;
     --orange: #ff9061;
-    --yellow: #FAD75C;
+    --yellow: #fad75c;
     --light-yellow: #fce79c;
-    /* --light-yellow: #fff6d7; */
-    --dark-purple: #682FAD;
-    --light-purple: #9C50FA;
+
+    /* Fuentes */
+    --font-dark-blue: #246259;
 
     /* Sombras */
-    --blue-shade: rgba(106 208 203 / 60%);
-    --dark-shade: rgba(0 0 0 / 30%);;
+    --blue-shade: rgba(106 208 203 / 55%);
     --light-shade: rgba(0 0 0 / 10%);
 }
 
@@ -44,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Lato", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Evitar que se puedan subrayar las imágenes en todo el sitio */
 img {
     user-select: none;
 }

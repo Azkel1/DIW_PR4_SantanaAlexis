@@ -174,18 +174,19 @@ main {
     flex-direction: column;
     flex-grow: 1;
 
-    /* height: fit-content; */
-    padding: 0 2em 1em 3em;
+    padding: 1em 2em 0 3em;
     overflow: scroll;
 }
 
 /* ---------------------------- ESTILOS MÓVILES ---------------------------- */
+/* ---------------------- Portátil ---------------------- */
 @media only screen and (max-width: 1160px) {
     aside {
         position: absolute;
     }
 }
 
+/* ---------------------- Tablet ---------------------- */
 @media only screen and (max-width: 900px) {
     aside {
         overflow-y: scroll;

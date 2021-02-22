@@ -1,7 +1,7 @@
 @import "base.css";
 
-/* ---------------- Estilos Escritorio ---------------- */
-/* ---- Cabecera ---- */
+/* --------------------------- ESTILOS ESCRITORIO --------------------------- */
+/* --------------------------- Cabecera --------------------------- */
 header {
     background-color: var(--dark-blue);
     
@@ -40,13 +40,14 @@ header > aside a {
     display: flex;
     align-items: center;
     
-    margin-top: 1.5em;
     padding: 0.8em 1em;
     
     width: fit-content;
+    width: -moz-fit-content;
 }
 
-.header-button:hover, .header-button:focus {
+.header-button:hover, 
+.header-button:focus {
     background-color: var(--dark-blue);
     box-shadow: inset 0 0 0 2px var(--yellow);
     color: var(--yellow);
@@ -56,7 +57,7 @@ header > aside a {
     padding-left: 0.4em;
 }
 
-/* ---- Cuerpo ---- */
+/* --------------------------- Cuerpo --------------------------- */
 main {
     text-align: center;
     margin: 1em auto;
@@ -109,7 +110,7 @@ main a {
     padding: 1em;
 }
 
-/* ---- Pie de página ---- */
+/* --------------------------- Pie de página --------------------------- */
 footer {
     display: flex;
     justify-content: center;
@@ -139,7 +140,8 @@ footer #links p {
     margin-bottom: 0.7em;
 }
 
-/* ---------------- Estilos Móviles ---------------- */
+/* ---------------------------- ESTILOS MÓVILES ---------------------------- */
+/* ---------------------- Portátil ---------------------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px){
     .inicio-tipo-usuario h2 {
         font-size: 115%;
@@ -150,6 +152,7 @@ footer #links p {
     }
 }
 
+/* ---------------------- Tablet ---------------------- */
 @media only screen and (max-width : 768px){
     main {
         padding-bottom: 0;
@@ -184,6 +187,7 @@ footer #links p {
     }
 }
 
+/* ---------------------- Móvil ---------------------- */
 @media only screen and (max-width : 530px){
     main {
         padding-bottom: 0;
@@ -215,7 +219,8 @@ footer #links p {
     }
 }
 
-@media only screen and (max-width : 489px){    /* Móvil pequeño */ 
+/* ---------------------- Móvil pequeño ---------------------- */
+@media only screen and (max-width : 489px){    
     header {
         flex-direction: column;
         align-items: center;
@@ -231,5 +236,9 @@ footer #links p {
 
     header > aside a {
         margin: 0.5em 0.5em;
+    }
+
+    .header-button {
+        margin-top: 1.5em;
     }
 }
